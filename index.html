@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <title>Expense Tracker</title>
+  <body>
+    <div class="main-container">
+      <h1>Track your expenses</h1>
+      <div class="display">
+        <span>Balance Amount</span>
+        <span id="bal">₹0.00</span>
+        <div class="inc-exp-container">
+          <div class="inc">
+            <span>INCOME</span>
+            <span class="inc-num">₹0.00</span>
+          </div>
+          <div class="exp">
+            <span>EXPENSE</span>
+            <span class="exp-num">₹0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="history">
+        <h4>History</h4>
+        <ul></ul>
+      </div>
+      <div class="form-container">
+        <h4>Add new Transaction</h4>
+        <form onsubmit="onSub(event)">
+          <label id="description" for="Description">Description</label>
+          <input
+            type="text"
+            id="description-id"
+            placeholder="What is this Amount"
+          />
+          <label id="amount-label" for="Amount">Amount</label>
+          <input
+            type="number"
+            id="amt-id"
+            class="amt"
+            placeholder="Enter Amount"
+          />
+          <div class="radio-btns">
+            <input
+              class="radio-op"
+              checked
+              id="radio-inc"
+              type="radio"
+              name="amount"
+              value="xxxincxxx"
+            />
+            <label for="radio-inc">Income</label>
+            <input
+              class="radio-op"
+              id="radio-exp"
+              type="radio"
+              name="amount"
+              value="xxxexpxxx"
+            />
+            <label for="radio-exp">Expense</label>
+          </div>
+          <button type="submit">Add Transaction</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

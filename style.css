@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: rgb(0, 137, 165);
+  display: flex;
+  justify-content: center; /*x axis*/
+  align-items: center; /*y axis*/
+}
+body > div {
+  border: 1px solid transparent;
+  padding: 10px;
+  background-color: rgb(0, 100, 123);
+  border-radius: 10px;
+}
+.display {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.inc-exp-container {
+  display: flex;
+  width: 100%;
+  /* align-items: center; */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.inc-exp-container > div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: antiquewhite;
+  padding: 5px;
+  height: 100%;
+}
+.inc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+  border-right: 1px solid grey;
+}
+.exp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+.history h4 {
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+form button {
+  padding: 5px;
+  width: 100%;
+  background-color: rgb(229, 162, 235);
+  box-shadow: 0 0 10px #936a6a0a;
+  border-radius: 3px;
+  border: none;
+}
+.form-container h4 {
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
+}
+.form-container label {
+  padding-bottom: 5px;
+}
+.form-container input {
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 3px;
+  outline: 0;
+  border: 1px solid black;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+/* #description {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+}
+#amount {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+} */
+.radio-btns {
+  width: 100%;
+  display: flex;
+  margin: 10px 0px; /* top,bottom and right,left*/
+  /* width: 50%; */
+  border-radius: 5px;
+  overflow: hidden;
+}
+.radio-btns input {
+  display: none;
+}
+.radio-btns label {
+  background-color: white;
+  height: 100%;
+  width: calc(100% / 2);
+  padding: 4px;
+  text-align: center;
+}
+.radio-btns #radio-inc:checked + label {
+  background-color: rgb(90, 227, 90);
+  border-right: 1px solid grey;
+}
+.radio-btns #radio-exp:checked + label {
+  background-color: rgb(255, 67, 67);
+}
+
+ul {
+  /* background-color: red; */
+  /* background-color: white; */
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+}
+li {
+  padding: 5px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.75);
+  margin: 5px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+ul button {
+  position: absolute;
+  top: calc(35% / 2);
+  left: -10px;
+  opacity: 0;
+  cursor: pointer;
+  background-color: red;
+  border: none;
+  padding: 2px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.good {
+  /* background-color: green; */
+  border-right: 15px solid green;
+}
+.bad {
+  border-right: 15px solid red;
+}
+li:hover button {
+  opacity: 1;
+}
